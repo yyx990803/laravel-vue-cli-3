@@ -49,7 +49,7 @@ yarn build # OR npm run build
       outputDir: '../public',
 
       // modify the location of the generated HTML file.
-      // make sure to do this only in prorduction.
+      // make sure to do this only in production.
       chainWebpack: config => {
         if (process.env.NODE_ENV === 'production') {
           config.plugin('html').tap(opts => {
