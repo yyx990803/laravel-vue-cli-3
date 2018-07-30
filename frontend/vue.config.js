@@ -10,12 +10,7 @@ module.exports = {
 
   // modify the location of the generated HTML file.
   // make sure to do this only in prorduction.
-  chainWebpack: config => {
-    if (process.env.NODE_ENV === 'production') {
-      config.plugin('html').tap(opts => {
-        opts[0].filename = '../resources/views/index.blade.php'
-        return opts
-      })
-    }
-  }
+  indexPath: process.env.NODE_ENV === 'production'
+    ? '../resources/views/index.blade.php'
+    : 'index.html'
 }
