@@ -39,7 +39,6 @@ yarn build # OR npm run build
     ``` js
     module.exports = {
       // proxy API requests to Valet during development
-      // adjust according to your dev setup
       devServer: {
         proxy: 'http://laracon.test'
       },
@@ -49,15 +48,10 @@ yarn build # OR npm run build
       outputDir: '../public',
 
       // modify the location of the generated HTML file.
-      // make sure to do this only in production.
-      chainWebpack: config => {
-        if (process.env.NODE_ENV === 'production') {
-          config.plugin('html').tap(opts => {
-            opts[0].filename = '../resources/views/index.blade.php'
-            return opts
-          })
-        }
-      }
+      // make sure to do this only in prorduction.
+      indexPath: process.env.NODE_ENV === 'production'
+        ? '../resources/views/index.blade.php'
+        : 'index.html'
     }
     ```
 
