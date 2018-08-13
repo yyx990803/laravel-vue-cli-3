@@ -9,7 +9,7 @@ module.exports = {
   outputDir: '../public',
 
   // modify the location of the generated HTML file.
-  // make sure to do this only in prorduction.
+  // make sure to do this only in production.
   indexPath: process.env.NODE_ENV === 'production'
     ? '../resources/views/index.blade.php'
     : 'index.html'
