@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "rm -rf ../public/{js,css,img} && vue-cli-service build --no-clean",
+    "build": "rimraf ../public/{js,css,img} && vue-cli-service build --no-clean",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "@vue/cli-plugin-babel": "^3.0.0-rc.9",
     "@vue/cli-plugin-eslint": "^3.0.0-rc.9",
     "@vue/cli-service": "^3.0.0-rc.9",
+    "rimraf": "^2.6.2",
     "vue-template-compiler": "^2.5.16"
   },
   "eslintConfig": {
