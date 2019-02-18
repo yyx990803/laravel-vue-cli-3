@@ -22,7 +22,7 @@ yarn build # OR npm run build
     cd my-project
 
     # remove existing frontend scaffold
-    rm -rf package.json webpack.mix.js yarn.lock resources/assets
+    rm -rf package.json webpack.mix.js yarn.lock resources/js resources/sass
     ```
 
 2. Create a Vue CLI 3 project in the Laravel app
